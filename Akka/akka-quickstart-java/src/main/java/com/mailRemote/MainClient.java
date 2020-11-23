@@ -20,6 +20,7 @@ public class MainClient {
         Config conf = ConfigFactory.parseFile(new File("clientConfig.conf"));
         final ActorSystem sys = ActorSystem.create("ClientSystem", conf);
         final ActorRef clientActor1 = sys.actorOf(ClientActor.props(), "clientActor1");
+
         System.out.println("created client actor: " + clientActor1.toString());
 
         String serverAddr = "akka.tcp://Server@10.0.0.1:2552/user/serverActor";
