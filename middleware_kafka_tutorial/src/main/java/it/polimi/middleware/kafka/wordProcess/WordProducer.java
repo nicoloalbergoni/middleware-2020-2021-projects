@@ -14,7 +14,7 @@ public class WordProducer {
 
     private static final String defaultTopic = "topicA";
 
-    private static final int numMessages = 100;
+    private static final int numMessages = 1000;
     private static final int waitBetweenMsgs = 500;
     private static final boolean waitAck = true;
 
@@ -37,7 +37,7 @@ public class WordProducer {
 
         for (int i = 0; i < numMessages; i++) {
             final String topic = topics.get(r.nextInt(topics.size()));
-            final String key = "Key" + r.nextInt(1000);
+            final String key = "Key" + i;
             final String value = "Val" + i;
             System.out.println(
                     "Topic: " + topic +

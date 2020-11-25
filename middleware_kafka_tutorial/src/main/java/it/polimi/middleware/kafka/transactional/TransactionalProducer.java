@@ -3,12 +3,9 @@ package it.polimi.middleware.kafka.transactional;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
-import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.serialization.StringSerializer;
 
 import java.util.*;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
 
 public class TransactionalProducer {
     private static final String defaultTopic = "topicA";
@@ -44,8 +41,8 @@ public class TransactionalProducer {
             final String value = "Val" + i;
             System.out.println(
                     "Topic: " + topic +
-                    "\tKey: " + key +
-                    "\tValue: " + value
+                            "\tKey: " + key +
+                            "\tValue: " + value
             );
 
             final ProducerRecord<String, String> record = new ProducerRecord<>(topic, key, value);

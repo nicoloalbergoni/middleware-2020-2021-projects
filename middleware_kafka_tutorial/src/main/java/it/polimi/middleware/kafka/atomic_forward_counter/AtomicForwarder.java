@@ -1,4 +1,4 @@
-package it.polimi.middleware.kafka.atomic_forward;
+package it.polimi.middleware.kafka.atomic_forward_counter;
 
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.clients.producer.KafkaProducer;
@@ -15,7 +15,7 @@ import java.util.*;
 public class AtomicForwarder {
     private static final String defaultConsumerGroupId = "groupA";
     private static final String defaultInputTopic = "topicA";
-    private static final String defaultOutputTopic = "topicB";
+    private static final String defaultOutputTopic = "counterTopic";
 
     private static final String serverAddr = "localhost:9092";
     private static final String producerTransactionalId = "forwarderTransactionalId";
@@ -60,6 +60,7 @@ public class AtomicForwarder {
                         "\tKey: " + record.key() +
                         "\tValue: " + record.value()
                 );
+
                 producer.send(new ProducerRecord<>(outputTopic, record.key(), record.value()));
 
                 // The producer manually commits the outputs for the consumer within the transaction

@@ -3,8 +3,40 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07960f6-e63c-4fd2-8aff-4192f82b26c4" name="Default Changelist" comment="" />
+    <list default="true" id="a07960f6-e63c-4fd2-8aff-4192f82b26c4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Akka/final_exe_streamPipeline/src/main/java/StreamPipeline/AverageActorOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Akka/final_exe_streamPipeline/src/main/java/StreamPipeline/MultiplyActorOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter/AtomicForwarder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter/IdempotentProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Akka/final_exe_streamPipeline/src/main/java/StreamPipeline/AddActorOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Akka/final_exe_streamPipeline/src/main/java/StreamPipeline/AddActorOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Akka/final_exe_streamPipeline/src/main/java/StreamPipeline/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Akka/final_exe_streamPipeline/src/main/java/StreamPipeline/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward/AtomicForwarder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward/AtomicForwarder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward/IdempotentProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward/IdempotentProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/transactional/TransactionalConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/transactional/TransactionalConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/transactional/TransactionalProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/transactional/TransactionalProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/wordProcess/WordProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/wordProcess/WordProducer.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +50,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -28,6 +60,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1kfRjfHtmCxz2rom8S9lSCJgnpt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,15 +69,59 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter" />
   </component>
-  <component name="RunManager" selected="Application.WordProcessConsumer">
-    <configuration name="TopicManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.admin.TopicManager" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Albe\Desktop\middleware-2020-2021-projects\middleware_kafka_tutorial\src\main\java\it\polimi\middleware\kafka\atomic_forward_counter" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.AtomicForwarder">
+    <configuration name="AtomicForwarder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.atomic_forward.AtomicForwarder" />
       <module name="tutorial" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="it.polimi.middleware.kafka.admin.*" />
+          <option name="PATTERN" value="it.polimi.middleware.kafka.atomic_forward.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IdempotentProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.atomic_forward.IdempotentProducer" />
+      <module name="tutorial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.polimi.middleware.kafka.atomic_forward.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionalConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.transactional.TransactionalConsumer" />
+      <module name="tutorial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.polimi.middleware.kafka.transactional.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionalProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.transactional.TransactionalProducer" />
+      <module name="tutorial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.polimi.middleware.kafka.transactional.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -65,7 +142,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordProcessConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="WordProcessConsumer" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.wordProcess.WordProcessConsumer" />
       <module name="tutorial" />
       <extension name="coverage">
@@ -78,7 +155,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="WordProducer" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.wordProcess.WordProducer" />
       <module name="tutorial" />
       <extension name="coverage">
@@ -91,25 +168,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RunProdCons" type="CompoundRunConfigurationType">
+      <toRun name="WordProcessConsumer" type="Application" />
+      <toRun name="WordProducer" type="Application" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType">
+      <toRun name="WordProcessConsumer" type="Application" />
+      <toRun name="WordProducer" type="Application" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.WordProcessConsumer" />
+      <item itemvalue="Application.WordProducer" />
+      <item itemvalue="Application.WordConsumer" />
+      <item itemvalue="Compound.RunProdCons" />
+      <item itemvalue="Application.TransactionalProducer" />
+      <item itemvalue="Application.TransactionalConsumer" />
+      <item itemvalue="Application.IdempotentProducer" />
+      <item itemvalue="Application.AtomicForwarder" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WordProcessConsumer" />
-        <item itemvalue="Application.WordProducer" />
+        <item itemvalue="Application.AtomicForwarder" />
+        <item itemvalue="Application.IdempotentProducer" />
+        <item itemvalue="Application.TransactionalConsumer" />
+        <item itemvalue="Application.TransactionalProducer" />
         <item itemvalue="Application.WordConsumer" />
-        <item itemvalue="Application.TopicManager" />
       </list>
     </recent_temporary>
   </component>
@@ -123,32 +219,44 @@
       <updated>1606089797111</updated>
       <workItem from="1606089798456" duration="348000" />
       <workItem from="1606116909893" duration="2990000" />
+      <workItem from="1606296322983" duration="10971000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606089945294">
+    <state x="414" y="175" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606298367845">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606089945294" />
-    <state width="1877" height="288" key="GridCell.Tab.0.bottom" timestamp="1606122960353">
+    <state x="414" y="175" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606298367845" />
+    <state width="1877" height="382" key="GridCell.Tab.0.bottom" timestamp="1606324355534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606122960353" />
-    <state width="1877" height="288" key="GridCell.Tab.0.center" timestamp="1606122960353">
+    <state width="1877" height="382" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606324355534" />
+    <state width="1877" height="382" key="GridCell.Tab.0.center" timestamp="1606324355534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.center/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606122960353" />
-    <state width="1877" height="288" key="GridCell.Tab.0.left" timestamp="1606122960353">
+    <state width="1877" height="382" key="GridCell.Tab.0.center/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606324355534" />
+    <state width="1877" height="382" key="GridCell.Tab.0.left" timestamp="1606324355534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.left/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606122960353" />
-    <state width="1877" height="288" key="GridCell.Tab.0.right" timestamp="1606122960353">
+    <state width="1877" height="382" key="GridCell.Tab.0.left/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606324355534" />
+    <state width="1877" height="382" key="GridCell.Tab.0.right" timestamp="1606324355534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.right/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606122960353" />
+    <state width="1877" height="382" key="GridCell.Tab.0.right/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606324355534" />
   </component>
 </project>

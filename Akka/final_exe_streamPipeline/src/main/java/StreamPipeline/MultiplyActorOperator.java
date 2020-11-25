@@ -3,21 +3,19 @@ package StreamPipeline;
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.actor.Props;
-
 import java.util.ArrayList;
 import java.util.Random;
 
-public class AddActorOperator extends AbstractActor {
+public class MultiplyActorOperator extends AbstractActor {
 
-    private final int maxWindowSize = 2;
-    final static int numberOfKeys2 = 100;
+    private final int maxWindowSize = 10;
+    final static int numberOfKeys3 = 50;
     private ArrayList<Integer> buffer;
     public static ArrayList<ActorRef> nextStep;
 
-    public AddActorOperator() {
-        this.buffer = new ArrayList<Integer>();
+    public MultiplyActorOperator() {
+        this.buffer = new ArrayList<>();
     }
-
 
     @Override
     public Receive createReceive() {
@@ -26,17 +24,17 @@ public class AddActorOperator extends AbstractActor {
 
     void onMessage(DataMessage msg) {
         this.buffer.add(msg.getValue());
-        if (buffer.size() == maxWindowSize) {
-            Integer result = this.buffer.stream().reduce(0, Integer::sum);
-            DataMessage newMsg = new DataMessage(new Random().nextInt(numberOfKeys2), result);
+        if (this.buffer.size() == maxWindowSize) {
+            Integer result = this.buffer.stream().reduce(1, (subtotal, next) -> subtotal * next);
+            DataMessage newMsg = new DataMessage(new Random().nextInt(numberOfKeys3), result);
             nextStep.get(msg.getKey() % Main.numberOfInstances).tell(newMsg, this.getSelf());
-            System.out.println("Sending result: " + newMsg.getValue() + " to Next MultiplyActor with key: " + newMsg.getKey());
+            System.out.println("Sending result: " + newMsg.getValue() + " to Next AverageActor with key: " + newMsg.getKey());
             this.buffer.clear();
             System.out.println("Clearing " + this.getSelf() + " Buffer");
         }
     }
 
     static Props props() {
-        return Props.create(AddActorOperator.class);
+        return Props.create(MultiplyActorOperator.class);
     }
 }
