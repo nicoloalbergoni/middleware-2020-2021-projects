@@ -34,9 +34,14 @@ public class IdempotentProducer {
         final KafkaProducer<String, String> producer = new KafkaProducer<>(props);
         final Random r = new Random();
 
+        final ProducerRecord<String, String> recordEven = new ProducerRecord<>("counterTopic", "KeyEven", "0");
+        producer.send(recordEven);
+        final ProducerRecord<String, String> recordOdd = new ProducerRecord<>("counterTopic", "KeyOdd", "0");
+        producer.send(recordOdd);
+
         for (int i = 0; i < numMessages; i++) {
             final String topic = topics.get(r.nextInt(topics.size()));
-            final String key = "Key" + r.nextInt(1000);
+            final String key = "Key" + ((i % 2 == 0) ? "Even" : "Odd");
             final String value = "Val" + i;
             System.out.println(
                     "Topic: " + topic +

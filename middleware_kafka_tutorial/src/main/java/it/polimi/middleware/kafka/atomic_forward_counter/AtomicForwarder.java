@@ -16,22 +16,19 @@ public class AtomicForwarder {
     private static final String defaultConsumerGroupId = "groupA";
     private static final String defaultInputTopic = "topicA";
     private static final String defaultOutputTopic = "counterTopic";
+    private static  final boolean autoCommit = true;
+    private static final int autoCommitIntervalMs = 15000;
+    private static final String offsetResetStrategy = "latest";
 
     private static final String serverAddr = "localhost:9092";
     private static final String producerTransactionalId = "forwarderTransactionalId";
 
     public static void main(String[] args) {
-        // If there are arguments, use the first as group, the second as input topic, the third as output topic.
-        // Otherwise, use default group and topics.
-        String consumerGroupId = args.length >= 1 ? args[0] : defaultConsumerGroupId;
-        String inputTopic = args.length >= 2 ? args[1] : defaultInputTopic;
-        String outputTopic = args.length >= 3 ? args[2] : defaultOutputTopic;
 
-        // Consumer
+        // Basic Consumer
         final Properties consumerProps = new Properties();
         consumerProps.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverAddr);
-        consumerProps.put(ConsumerConfig.GROUP_ID_CONFIG, consumerGroupId);
-
+        consumerProps.put(ConsumerConfig.GROUP_ID_CONFIG, defaultConsumerGroupId);
         consumerProps.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         consumerProps.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         consumerProps.put(ConsumerConfig.ISOLATION_LEVEL_CONFIG, "read_committed");
@@ -39,7 +36,33 @@ public class AtomicForwarder {
         consumerProps.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
 
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(consumerProps);
-        consumer.subscribe(Collections.singletonList(inputTopic));
+        consumer.subscribe(Collections.singletonList(defaultInputTopic));
+
+        // Counter State Consumer
+        final Properties counterConsumerProps = new Properties();
+        counterConsumerProps.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverAddr);
+        counterConsumerProps.put(ConsumerConfig.GROUP_ID_CONFIG, defaultConsumerGroupId);
+        counterConsumerProps.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, String.valueOf(autoCommit));
+        counterConsumerProps.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, String.valueOf(autoCommitIntervalMs));
+        counterConsumerProps.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, offsetResetStrategy);
+        counterConsumerProps.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+        counterConsumerProps.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+
+        KafkaConsumer<String, String> getStateConsumer = new KafkaConsumer<String, String>(counterConsumerProps);
+        getStateConsumer.subscribe(Collections.singletonList(defaultOutputTopic));
+
+        HashMap<String, Integer> state = new HashMap<>();
+        for (final ConsumerRecord<String, String> record : getStateConsumer.poll(Duration.of(5, ChronoUnit.MINUTES))) {
+            System.out.println("Collecting initial state...");
+            System.out.println("Partition: " + record.partition() +
+                    "\tOffset: " + record.offset() +
+                    "\tKey: " + record.key() +
+                    "\tValue: " + record.value()
+            );
+            state.putIfAbsent(record.key(), Integer.parseInt(record.value()));
+        }
+        System.out.println("Finished");
+        getStateConsumer.close();
 
         // Producer
         final Properties producerProps = new Properties();
@@ -47,6 +70,7 @@ public class AtomicForwarder {
         producerProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         producerProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         producerProps.put(ProducerConfig.TRANSACTIONAL_ID_CONFIG, producerTransactionalId);
+        producerProps.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, String.valueOf(true));
 
         final KafkaProducer<String, String> producer = new KafkaProducer<>(producerProps);
         producer.initTransactions();
@@ -55,15 +79,16 @@ public class AtomicForwarder {
             final ConsumerRecords<String, String> records = consumer.poll(Duration.of(5, ChronoUnit.MINUTES));
             producer.beginTransaction();
             for (final ConsumerRecord<String, String> record : records) {
-                System.out.println("Partition: " + record.partition() +
-                        "\tOffset: " + record.offset() +
-                        "\tKey: " + record.key() +
-                        "\tValue: " + record.value()
-                );
+                state.putIfAbsent(record.key(), 0);
+                state.put(record.key(), state.get(record.key()) + 1);
+                System.out.println("Key: " + record.key() + "Counter: " + state.get(record.key()));
 
-                producer.send(new ProducerRecord<>(outputTopic, record.key(), record.value()));
+                state.forEach((key, value) -> {
+                    producer.send(new ProducerRecord<String, String>(defaultOutputTopic, key, value.toString()));
+                });
 
                 // The producer manually commits the outputs for the consumer within the transaction
+                /*
                 final Map<TopicPartition, OffsetAndMetadata> map = new HashMap<>();
                 for (final TopicPartition partition : records.partitions()) {
                     final List<ConsumerRecord<String, String>> partitionRecords = records.records(partition);
@@ -71,7 +96,9 @@ public class AtomicForwarder {
                     map.put(partition, new OffsetAndMetadata(lastOffset + 1));
                 }
 
-                producer.sendOffsetsToTransaction(map, consumerGroupId);
+                producer.sendOffsetsToTransaction(map, defaultConsumerGroupId);
+                */
+
                 producer.commitTransaction();
             }
         }

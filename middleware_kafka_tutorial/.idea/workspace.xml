@@ -23,19 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a07960f6-e63c-4fd2-8aff-4192f82b26c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Akka/final_exe_streamPipeline/src/main/java/StreamPipeline/AverageActorOperator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Akka/final_exe_streamPipeline/src/main/java/StreamPipeline/MultiplyActorOperator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter/AtomicForwarder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter/IdempotentProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Akka/final_exe_streamPipeline/src/main/java/StreamPipeline/AddActorOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Akka/final_exe_streamPipeline/src/main/java/StreamPipeline/AddActorOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Akka/final_exe_streamPipeline/src/main/java/StreamPipeline/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Akka/final_exe_streamPipeline/src/main/java/StreamPipeline/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward/AtomicForwarder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward/AtomicForwarder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward/IdempotentProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward/IdempotentProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/transactional/TransactionalConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/transactional/TransactionalConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/transactional/TransactionalProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/transactional/TransactionalProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/wordProcess/WordProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/wordProcess/WordProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter/AtomicForwarder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter/AtomicForwarder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter/IdempotentProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter/IdempotentProducer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,16 +59,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Albe\Desktop\middleware-2020-2021-projects\middleware_kafka_tutorial\src\main\java\it\polimi\middleware\kafka\atomic_forward_counter" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AtomicForwarder">
-    <configuration name="AtomicForwarder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.atomic_forward.AtomicForwarder" />
+  <component name="RunManager" selected="Compound.AtomicForwardCounterCompound">
+    <configuration name="AtomicForwarder" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.atomic_forward_counter.AtomicForwarder" />
       <module name="tutorial" />
       <extension name="coverage">
         <pattern>
@@ -90,8 +80,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IdempotentProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.atomic_forward.IdempotentProducer" />
+    <configuration name="IdempotentProducer" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.atomic_forward_counter.IdempotentProducer" />
       <module name="tutorial" />
       <extension name="coverage">
         <pattern>
@@ -168,16 +158,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="AtomicForwardCounterCompound" type="CompoundRunConfigurationType">
+      <toRun name="AtomicForwarder" type="Application" />
+      <toRun name="IdempotentProducer" type="Application" />
+      <method v="2" />
     </configuration>
     <configuration name="RunProdCons" type="CompoundRunConfigurationType">
       <toRun name="WordProcessConsumer" type="Application" />
@@ -185,24 +182,23 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="CompoundRunConfigurationType">
-      <toRun name="WordProcessConsumer" type="Application" />
-      <toRun name="WordProducer" type="Application" />
+      <toRun name="AtomicForwarder" type="Application" />
+      <toRun name="IdempotentProducer" type="Application" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.WordProcessConsumer" />
       <item itemvalue="Application.WordProducer" />
-      <item itemvalue="Application.WordConsumer" />
-      <item itemvalue="Compound.RunProdCons" />
-      <item itemvalue="Application.TransactionalProducer" />
-      <item itemvalue="Application.TransactionalConsumer" />
       <item itemvalue="Application.IdempotentProducer" />
       <item itemvalue="Application.AtomicForwarder" />
+      <item itemvalue="Application.WordConsumer" />
+      <item itemvalue="Application.TransactionalProducer" />
+      <item itemvalue="Application.TransactionalConsumer" />
+      <item itemvalue="Compound.AtomicForwardCounterCompound" />
+      <item itemvalue="Compound.RunProdCons" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AtomicForwarder" />
-        <item itemvalue="Application.IdempotentProducer" />
         <item itemvalue="Application.TransactionalConsumer" />
         <item itemvalue="Application.TransactionalProducer" />
         <item itemvalue="Application.WordConsumer" />
@@ -220,6 +216,7 @@
       <workItem from="1606089798456" duration="348000" />
       <workItem from="1606116909893" duration="2990000" />
       <workItem from="1606296322983" duration="10971000" />
+      <workItem from="1606463851955" duration="8436000" />
     </task>
     <servers />
   </component>
@@ -236,27 +233,32 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606298367845">
+    <state x="488" y="227" width="1092" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606473385722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606298367845" />
-    <state width="1877" height="382" key="GridCell.Tab.0.bottom" timestamp="1606324355534">
+    <state x="488" y="227" width="1092" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606473385722" />
+    <state x="763" y="398" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1606465114400">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="382" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606324355534" />
-    <state width="1877" height="382" key="GridCell.Tab.0.center" timestamp="1606324355534">
+    <state x="763" y="398" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606465114400" />
+    <state width="1877" height="362" key="GridCell.Tab.0.bottom" timestamp="1606509094689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="382" key="GridCell.Tab.0.center/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606324355534" />
-    <state width="1877" height="382" key="GridCell.Tab.0.left" timestamp="1606324355534">
+    <state width="1877" height="362" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606509094689" />
+    <state width="1877" height="362" key="GridCell.Tab.0.center" timestamp="1606509094688">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="382" key="GridCell.Tab.0.left/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606324355534" />
-    <state width="1877" height="382" key="GridCell.Tab.0.right" timestamp="1606324355534">
+    <state width="1877" height="362" key="GridCell.Tab.0.center/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606509094688" />
+    <state width="1877" height="362" key="GridCell.Tab.0.left" timestamp="1606509094688">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="382" key="GridCell.Tab.0.right/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606324355534" />
+    <state width="1877" height="362" key="GridCell.Tab.0.left/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606509094688" />
+    <state width="1877" height="362" key="GridCell.Tab.0.right" timestamp="1606509094688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="362" key="GridCell.Tab.0.right/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606509094688" />
   </component>
 </project>
