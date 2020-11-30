@@ -14,6 +14,8 @@ import org.apache.spark.sql.types.StructType;
 
 import it.polimi.middleware.spark.utils.LogUtils;
 
+import javax.xml.crypto.Data;
+
 /**
  * Bank example
  *
@@ -63,15 +65,28 @@ public class Bank {
 
         // Q1. Total amount of withdrawals for each person
 
-        // TODO
+        Dataset<Row> sumWithdrowal = withdrawals.groupBy("person").sum("amount");
+        sumWithdrowal.show();
 
         // Q2. Person with the maximum total amount of withdrawals
 
-        // TODO
+        long maxWithdrowal = sumWithdrowal.agg(max("sum(amount)")).first().getLong(0);
+        Dataset<Row> maxPerson = sumWithdrowal.filter(sumWithdrowal.col("sum(amount)").equalTo(maxWithdrowal));
+        maxPerson.show();
 
         // Q3 Accounts with negative balance
 
-        // TODO
+        Dataset<Row> totDeposit = deposits.groupBy("account").sum("amount");
+        Dataset<Row> totWithdrowal = withdrawals.groupBy("account").sum("amount");
+
+        Dataset<Row> negativeAccounts = totWithdrowal.join(totDeposit, totDeposit.col("account").equalTo(totWithdrowal.col("account")), "left_outer")
+                .filter(totWithdrowal.col("sum(amount)").gt(totDeposit.col("sum(amount)"))
+                    .or(totDeposit.col("sum(amount)").isNull().and(totWithdrowal.col("sum(amount)").gt(0)))
+                ).select(totWithdrowal.col("account"));
+
+        //totDeposit.show();
+        //totWithdrowal.show();
+        negativeAccounts.show();
 
         spark.close();
 

@@ -24,8 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a07960f6-e63c-4fd2-8aff-4192f82b26c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter/AtomicForwarder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter/AtomicForwarder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter/IdempotentProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter/IdempotentProducer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Spark/middleware_spark_tutorial" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -158,19 +156,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AtomicForwardCounterCompound" type="CompoundRunConfigurationType">
       <toRun name="AtomicForwarder" type="Application" />
       <toRun name="IdempotentProducer" type="Application" />
@@ -217,6 +202,7 @@
       <workItem from="1606116909893" duration="2990000" />
       <workItem from="1606296322983" duration="10971000" />
       <workItem from="1606463851955" duration="8436000" />
+      <workItem from="1606724637481" duration="25000" />
     </task>
     <servers />
   </component>
@@ -244,6 +230,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="763" y="398" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606465114400" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1606724682121">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606724682121" />
     <state width="1877" height="362" key="GridCell.Tab.0.bottom" timestamp="1606509094689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
