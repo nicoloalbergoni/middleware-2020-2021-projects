@@ -1,4 +1,3 @@
-
 package it.polimi.middleware.spark.batch.iterative;
 
 import it.polimi.middleware.spark.utils.LogUtils;
@@ -7,8 +6,6 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import scala.Tuple2;
 
-import java.util.Arrays;
-
 /**
  * Start from a dataset of investments. Each element is a Tuple2(amount_owned, interest_rate).
  * At each iteration the new amount is (amount_owned * (1+interest_rate)).
@@ -16,10 +13,10 @@ import java.util.Arrays;
  * Implement an iterative algorithm that computes the new amount for each investment and stops
  * when the overall amount overcomes 1000.
  *
- * Set the value of the flag useCache to see the effects of caching.
+ * Exemplifies the use of unpersist.
  */
-public class InvestmentSimulator {
-    private static final boolean useCache = true;
+public class InvestmentSimulatorUnpersist {
+    private static int numMapInvocations = 0;
 
     public static void main(String[] args) {
         LogUtils.setLogLevel();
@@ -41,15 +38,26 @@ public class InvestmentSimulator {
             return new Tuple2(amountOwned, investmentRate);
         });
 
+        JavaRDD<Tuple2<Double, Double>> oldInvestments = investments;
+        investments.cache();
+
         int iteration = 0;
         double sum = sumAmount(investments);
         while (sum < threshold) {
-            iteration++;
-            investments = investments.map(i -> new Tuple2<>(i._1*(1+i._2), i._2));
-            if (useCache) {
-                investments.cache();
-            }
+            System.out.println("Iteration: " + (iteration++));
+            investments = investments.map(i -> {
+                System.out.println("Number of invocations of the map " + (numMapInvocations++));
+                return new Tuple2<>(i._1*(1+i._2), i._2);
+            });
+            investments.cache();
             sum = sumAmount(investments);
+
+            // Important: this needs to be done after the action (sumAmount)
+            // otherwise the old investments would be unpersisted before the
+            // new investments are computed and cached.
+            // Try to move it before the action and see how the prints change.
+            oldInvestments.unpersist();
+            oldInvestments = investments;
         }
 
         System.out.println("Sum: " + sum + " after " + iteration + " iterations");
