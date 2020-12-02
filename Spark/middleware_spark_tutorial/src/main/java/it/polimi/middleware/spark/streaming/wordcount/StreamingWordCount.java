@@ -22,7 +22,7 @@ public class StreamingWordCount {
         final JavaStreamingContext sc = new JavaStreamingContext(conf, Durations.seconds(1));
 
         final JavaPairDStream<String, Integer> counts = sc.socketTextStream(socketHost, socketPort)
-                .window(Durations.seconds(10), Durations.seconds(5))
+                .window(Durations.seconds(10), Durations.seconds(5)) // The durations must be a multiple of the StreamingContext trigger time
                 .map(String::toLowerCase)
                 .flatMap(line -> Arrays.asList(line.split(" ")).iterator())
                 .mapToPair(s -> new Tuple2<>(s, 1))
