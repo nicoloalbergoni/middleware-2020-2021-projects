@@ -23,7 +23,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a07960f6-e63c-4fd2-8aff-4192f82b26c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/files/bank/deposits.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/files/bank/withdrawals.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/files/enrichment/product_classification.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/files/iterative/investment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/files/wordcount/in.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/spark_tutorial.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/src/main/java/it/polimi/middleware/spark/batch/bank/Bank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/src/main/java/it/polimi/middleware/spark/batch/iterative/InvestmentSimulator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/src/main/java/it/polimi/middleware/spark/batch/iterative/InvestmentSimulatorUnpersist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/src/main/java/it/polimi/middleware/spark/batch/wordcount/WordCount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/src/main/java/it/polimi/middleware/spark/batch/wordcount/WordCountModified.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/src/main/java/it/polimi/middleware/spark/streaming/enrichment/EventEnrichment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/src/main/java/it/polimi/middleware/spark/streaming/event_time/WindowedCount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/src/main/java/it/polimi/middleware/spark/streaming/wordcount/StreamingWordCount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/src/main/java/it/polimi/middleware/spark/streaming/wordcount/StreamingWordCountWithState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/src/main/java/it/polimi/middleware/spark/streaming/wordcount/StructuredStreamingWordCount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spark/middleware_spark_tutorial/src/main/java/it/polimi/middleware/spark/utils/LogUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/.idea/libraries/Maven__com_github_luben_zstd_jni_1_4_4_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/.idea/libraries/Maven__org_apache_kafka_kafka_clients_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/.idea/libraries/Maven__org_lz4_lz4_java_1_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_7_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/src/main/java/it/polimi/middleware/kafka/admin/TopicManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/src/main/java/it/polimi/middleware/kafka/atomic_forward/AtomicForwarder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/src/main/java/it/polimi/middleware/kafka/atomic_forward/IdempotentProducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter/AtomicForwarder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/src/main/java/it/polimi/middleware/kafka/atomic_forward_counter/IdempotentProducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/src/main/java/it/polimi/middleware/kafka/basic/BasicConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/src/main/java/it/polimi/middleware/kafka/basic/BasicConsumerManual.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/src/main/java/it/polimi/middleware/kafka/basic/BasicProducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/src/main/java/it/polimi/middleware/kafka/transactional/TransactionalConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/src/main/java/it/polimi/middleware/kafka/transactional/TransactionalProducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/src/main/java/it/polimi/middleware/kafka/wordProcess/WordConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/src/main/java/it/polimi/middleware/kafka/wordProcess/WordProcessConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/src/main/java/it/polimi/middleware/kafka/wordProcess/WordProducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_kafka_tutorial/tutorial.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,17 +104,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Spark/middleware_spark_tutorial" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Albe\Desktop\middleware-2020-2021-projects\middleware_kafka_tutorial\src\main\java\it\polimi\middleware\kafka\atomic_forward_counter" />
     </key>
   </component>
-  <component name="RunManager" selected="Compound.AtomicForwardCounterCompound">
+  <component name="RunManager" selected="Application.AtomicForwarder">
     <configuration name="AtomicForwarder" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.atomic_forward_counter.AtomicForwarder" />
-      <module name="tutorial" />
+      <module name="Kafka_Exe" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="it.polimi.middleware.kafka.atomic_forward.*" />
@@ -80,7 +127,7 @@
     </configuration>
     <configuration name="IdempotentProducer" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.atomic_forward_counter.IdempotentProducer" />
-      <module name="tutorial" />
+      <module name="Kafka_Exe" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="it.polimi.middleware.kafka.atomic_forward.*" />
@@ -93,7 +140,7 @@
     </configuration>
     <configuration name="TransactionalConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.transactional.TransactionalConsumer" />
-      <module name="tutorial" />
+      <module name="Kafka_Exe" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="it.polimi.middleware.kafka.transactional.*" />
@@ -106,7 +153,7 @@
     </configuration>
     <configuration name="TransactionalProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.transactional.TransactionalProducer" />
-      <module name="tutorial" />
+      <module name="Kafka_Exe" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="it.polimi.middleware.kafka.transactional.*" />
@@ -119,7 +166,7 @@
     </configuration>
     <configuration name="WordConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.wordProcess.WordConsumer" />
-      <module name="tutorial" />
+      <module name="Kafka_Exe" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="it.polimi.middleware.kafka.wordProcess.*" />
@@ -132,7 +179,7 @@
     </configuration>
     <configuration name="WordProcessConsumer" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.wordProcess.WordProcessConsumer" />
-      <module name="tutorial" />
+      <module name="Kafka_Exe" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="it.polimi.middleware.kafka.wordProcess.*" />
@@ -145,13 +192,26 @@
     </configuration>
     <configuration name="WordProducer" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.polimi.middleware.kafka.wordProcess.WordProducer" />
-      <module name="tutorial" />
+      <module name="Kafka_Exe" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="it.polimi.middleware.kafka.wordProcess.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -203,6 +263,8 @@
       <workItem from="1606296322983" duration="10971000" />
       <workItem from="1606463851955" duration="8436000" />
       <workItem from="1606724637481" duration="25000" />
+      <workItem from="1607674375390" duration="39000" />
+      <workItem from="1607674436103" duration="38000" />
     </task>
     <servers />
   </component>
@@ -234,21 +296,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606724682121" />
-    <state width="1877" height="362" key="GridCell.Tab.0.bottom" timestamp="1606509094689">
+    <state width="1877" height="323" key="GridCell.Tab.0.bottom" timestamp="1607674473094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="362" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606509094689" />
-    <state width="1877" height="362" key="GridCell.Tab.0.center" timestamp="1606509094688">
+    <state width="1877" height="323" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1607674473094" />
+    <state width="1877" height="323" key="GridCell.Tab.0.center" timestamp="1607674473094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="362" key="GridCell.Tab.0.center/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606509094688" />
-    <state width="1877" height="362" key="GridCell.Tab.0.left" timestamp="1606509094688">
+    <state width="1877" height="323" key="GridCell.Tab.0.center/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1607674473094" />
+    <state width="1877" height="323" key="GridCell.Tab.0.left" timestamp="1607674473094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="362" key="GridCell.Tab.0.left/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606509094688" />
-    <state width="1877" height="362" key="GridCell.Tab.0.right" timestamp="1606509094688">
+    <state width="1877" height="323" key="GridCell.Tab.0.left/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1607674473094" />
+    <state width="1877" height="323" key="GridCell.Tab.0.right" timestamp="1607674473094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="362" key="GridCell.Tab.0.right/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1606509094688" />
+    <state width="1877" height="323" key="GridCell.Tab.0.right/0.0.1920.1040/1920.172.1366.728@0.0.1920.1040" timestamp="1607674473094" />
   </component>
 </project>
